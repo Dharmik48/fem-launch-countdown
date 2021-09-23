@@ -140,6 +140,7 @@ footer {
 	display: flex;
 	gap: 1em;
 	font-size: clamp(1rem, 3.5vw, 2.5rem);
+	color: var(--g-blue);
 	transform: translate(-50%, -50%);
 }
 
