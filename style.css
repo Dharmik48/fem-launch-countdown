@@ -77,7 +77,11 @@ main {
 
 .cards {
 	position: relative;
-	padding: clamp(0.3em, 1vw, 1em);
+	display: grid;
+	place-items: center;
+	height: clamp(4.125rem, 11vw, 8.625rem);
+	width: clamp(4.375rem, 11vw, 9.25rem);
+	/* padding: clamp(0.3em, 1vw, 1em); */
 	font-size: clamp(2.25rem, 7vw, 5rem);
 	background-color: var(--dark-d-blue);
 	color: var(--soft-red);
@@ -113,7 +117,7 @@ main {
 	height: 50%;
 	width: 100%;
 	background-color: rgb(35, 35, 54);
-	opacity: 0.7;
+	opacity: 0.5;
 	border-radius: 0.1em 0.1em 0 0;
 }
 
@@ -135,8 +139,15 @@ footer {
 	display: flex;
 	gap: 1em;
 	font-size: clamp(1rem, 3.5vw, 2.5rem);
-	/* clamp(2.25rem, 7vw, 5rem) */
 	transform: translate(-50%, -50%);
+}
+
+.social-icons li {
+	transition: color 150ms ease-out;
+}
+
+.social-icons li:hover {
+	color: var(--soft-red);
 }
 
 footer img {
