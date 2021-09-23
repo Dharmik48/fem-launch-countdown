@@ -1,0 +1,144 @@
+:root {
+	--g-blue: hsl(237, 18%, 59%);
+	--soft-red: hsl(345, 95%, 68%);
+	--white: hsl(0, 0%, 100%);
+	--dark-d-blue: hsl(236, 21%, 26%);
+	--v-dark-blue: hsl(235, 16%, 14%);
+	--black-blue: rgb(17, 18, 19);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* REMOVE default styles */
+a {
+	text-decoration: none;
+	font-family: inherit;
+	color: inherit;
+}
+
+ul {
+	list-style: none;
+}
+
+h1,
+p {
+	text-transform: uppercase;
+	letter-spacing: 0.25em;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	width: 100%;
+
+	text-align: center;
+	color: var(--white);
+	font-family: 'Red Hat Text', sans-serif;
+	font-size: 14px;
+	/* background-color: var(); */
+	background: url('./images/bg-stars.svg') center center no-repeat,
+		linear-gradient(rgb(20, 21, 29), rgb(29, 22, 34));
+}
+
+h1 {
+	font-size: 1.25rem;
+}
+
+main {
+	flex: 1;
+	/* width: 100%; */
+	margin: 10em 0;
+	padding: 0 clamp(1em, 1.5em, 2em);
+	display: flex;
+	gap: 10em;
+	flex-direction: column;
+	justify-content: stretch;
+	align-items: center;
+}
+
+/* COUNTDOWN ⏱️ */
+.countdown {
+	display: grid;
+	gap: 1em;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.column {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+}
+
+.cards {
+	position: relative;
+	padding: clamp(0.3em, 1vw, 1em);
+	font-size: clamp(2.25rem, 7vw, 5rem);
+	background-color: var(--dark-d-blue);
+	color: var(--soft-red);
+	border-radius: 0.1em;
+	overflow: hidden;
+}
+
+.cards::after,
+.cards::before {
+	content: '';
+	position: absolute;
+	top: 50%;
+	height: 12px;
+	width: 12px;
+	background-color: var(--black-blue);
+	transform: translateY(-50%);
+	border-radius: 50%;
+	z-index: 9;
+}
+
+.cards::before {
+	left: -5px;
+}
+
+.cards::after {
+	right: -5px;
+}
+
+.cards .top {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 50%;
+	width: 100%;
+	background-color: rgb(35, 35, 54);
+	opacity: 0.7;
+	border-radius: 0.1em 0.1em 0 0;
+}
+
+.column p {
+	color: var(--g-blue);
+	font-size: 0.6rem;
+}
+
+/* FOOTER */
+footer {
+	position: relative;
+	max-width: 100%;
+}
+
+.social-icons {
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	display: flex;
+	gap: 1em;
+	font-size: clamp(1rem, 3.5vw, 2.5rem);
+	/* clamp(2.25rem, 7vw, 5rem) */
+	transform: translate(-50%, -50%);
+}
+
+footer img {
+	width: 100%;
+}
