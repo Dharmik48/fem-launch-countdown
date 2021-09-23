@@ -86,6 +86,7 @@ main {
 	background-color: var(--dark-d-blue);
 	color: var(--soft-red);
 	border-radius: 0.1em;
+	box-shadow: 0 8px var(--black-blue);
 	overflow: hidden;
 }
 
